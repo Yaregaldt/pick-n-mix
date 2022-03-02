@@ -1,19 +1,21 @@
 const newProductAdd = async (event) => {
   event.preventDefault();
 
-  const item = document.querySelector("#edit-name").value.trim(); //add in items id
-  const ammount = document.querySelector("#edit-name").value.trim(); //add in quantity id
+  const product_id = document.querySelector("#edit-name").value.trim(); //add in items id
+  const quantity = document.querySelector("#edit-name").value.trim(); //add in quantity id
 
-  if (item && ammount < 0) {
+  if (product_id && quantity < 0) {
     const response = await fetch("/api/list", {
       method: "POST",
-      body: JSON.stringify({}), //add in body values
+      body: JSON.stringify({ quantity, product_id }),
       headers: { "Content-Type": "application/json" },
     });
-    // if (response.ok) {
-    //   document.location.replace('/pagepath')   Do we want to refresh page each time they add an item?
-    // }
+    if (response.ok) {
+      alert("Item added");
+    }
   } else {
     alert("Failed to add product to list");
   }
 };
+
+document.querySelectory(".edit-name").addEventListener("submit", newProductAdd); // add in name

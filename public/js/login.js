@@ -2,8 +2,8 @@
 const loginForm = async (event) => {
   event.preventDevault();
 
-  const email = document.querySelector("#edit-later1").value.trim(); //edit the id email name after
-  const password = document.querySelector("#edit-later2").value.trim(); //edit the id pass name after
+  const email = document.querySelector("#email-login").value.trim();
+  const password = document.querySelector("#password-login").value.trim();
 
   if (email && password) {
     const response = await fetch("api/users/login", {
@@ -24,9 +24,9 @@ const loginForm = async (event) => {
 const signupForm = async (event) => {
   event.preventDevault();
 
-  const name = document.querySelector("#edit-later3").value.trim(); //edit the id email name after
-  const email = document.querySelector("#edit-later1").value.trim(); //edit the id pass name after
-  const password = document.querySelector("#edit-later2").value.trim(); //edit the id pass name after
+  const name = document.querySelector("#name-signup").value.trim();
+  const email = document.querySelector("#email-signup").value.trim();
+  const password = document.querySelector("#password-signup").value.trim();
 
   if (name && email && password) {
     const response = await fetch("/api/users", {
@@ -44,9 +44,9 @@ const signupForm = async (event) => {
 };
 
 document
-  .querySelector(".edit-name") // edit the form name we choose
+  .querySelector(".login-form")
   .addEventListener("submit", loginFormHandler);
 
 document
-  .querySelector(".edit-name") //edit the form name we choose
+  .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
