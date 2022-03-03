@@ -10,24 +10,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>Pick N Mix</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/jass.css" />
-    <link rel="stylesheet" type="text/css" href="../../public/css/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico" />
   </head>
 
   <body>
     <header>
-      <h1> </h1>
+      <h1> 🍃Pick N MIx🍃</h1>
     </header>
     <nav>
       <div class="navbar">
-        
-       
-        <a href="#"><i class="fa fa-fw fa-user"></i> Login-Out</a>
-        <a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
-        <a href="#"></i> 🍃Pick N MIx🍃</a>
         <a class="active" href="#"><i class="fa fa-fw fa-home"></i>Grocery
           Shopping Land</a>
+                  <a href="#"></i> 🍃Pick N MIx🍃</a>
+        <a href="/list"><i class="fa fa-shopping-cart"></i> List</a>
         
       </div>
       
@@ -50,10 +48,14 @@
     <main>
      <div class="catagory"></div>
       
-     
+     {{{body}}}
     </div>
     </main>
-   
+    <!-- If the user is logged in, load the JS script for when they logout -->
+    {{#if loggedIn}}
+      <script src="/public/js/logout.js"></script>
+    {{/if}}
+
   </body>
 
 </html>

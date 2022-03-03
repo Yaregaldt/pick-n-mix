@@ -18,4 +18,35 @@ const newProductAdd = async (event) => {
   }
 };
 
-document.querySelectory(".edit-name").addEventListener("submit", newProductAdd); // add in name
+const plusProduct = (event) => {
+  event.preventDefault();
+
+  var quantity_val = document.querySelector(".edit-input box").value.trim(); // addin the box value
+
+  if (box_quantity >= 0) {
+    quantity_val++;
+  }
+
+  document.querySelectory(".edit-input box").value = quantity_val; // edit input box name
+};
+
+const minusProduct = (event) => {
+  event.preventDefault();
+
+  var quantity_val = document.querySelector(".edit-input box").value.trim(); // add in box value
+
+  if (quantity_val > 0) {
+    quantity_val--;
+  }
+
+  document.querySelectory(".edit-input box").value = quantity_val; // edit input box name
+};
+
+document.querySelectory(".edit-name").addEventListener("submit", newProductAdd);
+
+document
+  .querySelector(".edit-button-After")
+  .addEventListener("click", plusProduct); //add in Name for button
+document
+  .querySelector(".edit-button-After")
+  .addEventListener("click", minusProduct); //add in Name for button

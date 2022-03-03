@@ -24,14 +24,18 @@ const loginForm = async (event) => {
 const signupForm = async (event) => {
   event.preventDevault();
 
-  const name = document.querySelector("#name-signup").value.trim();
+  console.log("Event handler working.");
+  const first_name = document.querySelector("#first-name-signup").value.trim();
+  const last_name = document.querySelector("#last-name-signup").value.trim();
+  const username = document.querySelector("#username-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
 
-  if (name && email && password) {
+  if (first_name && last_name && username && email && password) {
+    console.log("SIGNUP SUCCESSFUL....?");
     const response = await fetch("/api/users", {
       method: "POST",
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ first_name, last_name, username, email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
@@ -43,10 +47,6 @@ const signupForm = async (event) => {
   }
 };
 
-document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+document.querySelector(".login-form").addEventListener("submit", loginForm);
 
-document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+document.querySelector(".signup-form").addEventListener("submit", signupForm);
