@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Pick N Mix</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico" />
+  </head>
+
+  <body>
+    <header>
+      <h1> 🍃Pick N MIx🍃</h1>
+    </header>
+    <nav>
+      <div class="navbar">
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i>Grocery
+          Shopping Land</a>
+        <a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+        <a href="#"><i class="fa fa-fw fa-user"></i> Login-Out</a>
+        
+      </div>
+      
+    </nav>
+    <aside>
+      <div class="sidenav">
+        <a href="#purpose">🍃Product list🍃</a><br /><br />
+        <a href="#orderNo">1</a>
+        <a href="#orderNo">2</a>
+        <a href="#orderNo">3</a>
+        <a href="#orderNo">4</a>
+        <a href="#orderNo">5</a>
+        <a href="#orderNo">6</a>
+        <a href="#orderNo">7</a>
+        <a href="#orderNo">8</a>
+        <a href="#orderNo">9</a>
+        <a href="#orderNo">10</a>
+      </div>
+    </aside>
+    <main>
+     <div class="catagory"></div>
+      
+     {{{body}}}
+    </div>
+    </main>
+    <!-- If the user is logged in, load the JS script for when they logout -->
+    {{#if loggedIn}}
+      <script src="/public/js/logout.js"></script>
+    {{/if}}
+  </body>
+
+</html>
