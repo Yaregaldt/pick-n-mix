@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.sidenav {
+  width: 130px;
+  position: fixed;
+
+  top: 20px;
+  left: 10px;
+  background: rgb(235, 191, 191);
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #e9edf0;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #2c699b;
+}
+
+header {
+  padding: 35px;
+  text-align: center;
+  background: rgba(231, 104, 87, 0.116);
+  color: var(--light);
+}
+.catagory {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  background-color: rgb(93, 159, 168);
+}
+.navbar {
+  width: 100%;
+  background-color: rgba(180, 170, 187, 0.884);
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: rgba(0, 0, 0, 0.918);
+}
+
+.active {
+  background-color: #0d37c0;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
