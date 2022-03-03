@@ -8,10 +8,9 @@ const routes = require("./controllers");
 const path = require("path");
 const helpers = require("./utils/helpers");
 
-const session = require('express-session');
+const session = require("express-session");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
-
 
 //2. SET UP THE EXPRESS SERVER:
 const app = express();
@@ -22,16 +21,17 @@ const hbs = exphbs.create({ helpers });
 //Session Setup:
 //===============================================
 
-app.use(session({
-    secret: "Super secret secret",
-    saveUninitialized: true,
-    cookie: {},
-    resave: false,
-    store: new SequelizeStore({
-        db: sequelize,
-    })
-}));
+const sess = {
+  secret: "Super secret secret",
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
 
+app.use(session(sess));
 
 //SET UP MIDDLEWARE:
 //=======================================================
@@ -41,8 +41,8 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 //Sets up the Express app to handle html parsing.
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // This lets express server know where the static html pages are located. in this case its public html folder. this is where the html get parsed.
 app.use(express.static(path.join(__dirname, "public")));
@@ -50,15 +50,11 @@ app.use(express.static(path.join(__dirname, "public")));
 //we need to use express server to use the routes we code:
 app.use(routes);
 
-
 //SERVER START:
 //===============================================
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => {
-        console.log(`App is running on port ${PORT}`)
-    });
-});
+    app.listen(PORT, () => console.log(`App is running on port ${PORT}`));
+  });
 
- //we want our app to listen to a certain port during development but by default we will use 3001.
-
+//we want our app to listen to a certain port during development but by default we will use 3001.
