@@ -1,0 +1,80 @@
+[
+    {
+        "name": "Apple",
+        "desc": "Juicy red apple used for cooking, eating raw or cider production",
+        "price": 2.99,
+        "category_id": 1
+    },
+    {
+        "name": "Banana",
+        "desc": "Curved yellow fruit",
+        "price": 10.00,
+        "category_id": 1
+    },
+    {
+        "name": "Cabbage",
+        "desc": "thick green or purple leaves surrounding a spherical heart or head of young leaves",
+        "price": 4.99,
+        "category_id": 1
+    },
+    {
+        "name": "Dill",
+        "desc": "Herb used in pickling",
+        "price": 1.99,
+        "category_id": 1
+    },
+    {
+        "name": "Eggplant",
+        "desc": "Eggplants are similar to summer squash or zucchini: tender, mild, and sweet with a slight vegetal bitterness",
+        "price": 5.99,
+        "category_id": 1
+    },
+    {
+        "name": "Fennel",
+        "desc": "Fennel has a mild licorice flavor and can be thinly sliced and eaten raw or cooked",
+        "price": 4.75,
+        "category_id": 1
+    },
+    {
+        "name": "Chicken",
+        "desc": "Chicken is the most common poultry in the world. used in variety of cuisine",
+        "price": 7.99,
+        "category_id": 2
+    },
+    {
+        "name": "Beef",
+        "desc": "Beef contains protein, iron, and vitamin B12. Beef is used in steak ",
+        "price": 15.99,
+        "category_id": 2
+    },
+    {
+        "name": "Salmon",
+        "desc": "Wild Atlantic Salmon. Maybe used in variety of seafood dishes and logos",
+        "price": 20.00,
+        "category_id": 2
+    },
+    {
+        "name": "Milk",
+        "desc": "Nutrient rich for bone development",
+        "price": 7.99,
+        "category_id": 3
+    },
+    {
+        "name": "Icecream",
+        "desc": "Sweetened frozen food comes in a variety of flavours",
+        "price": 8.00,
+        "category_id": 3
+    },
+    {
+        "name": "Kitkat",
+        "desc": "chocolate covered wafer bar",
+        "price": 2.99,
+        "category_id": 4
+    },
+    {
+        "name": "Smarties",
+        "desc": "colour-varied sugar-coated chocolate confectioner",
+        "price": 1.99,
+        "category_id": 4
+    }
+]
