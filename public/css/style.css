@@ -10,10 +10,10 @@ main {
 
 .sidenav {
   width: 130px;
-  position: fixed;
+  position: absolute;
 
-  top: 20px;
-  left: 10px;
+  top: 166px;
+  left: 0px;
   background: rgb(235, 191, 191);
   overflow-x: hidden;
   padding: 8px 0;
@@ -53,8 +53,9 @@ header {
 }
 
 .navbar a {
-  float: left;
+  float: right;
   padding: 12px;
+  text-align: right;
   color: white;
   text-decoration: none;
   font-size: 17px;
