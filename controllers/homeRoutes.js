@@ -32,26 +32,55 @@ router.get("/", async (req, res) => {
 });
 
 // Dashboard route that retrieves all list items made by logged in user, use withAuth middleware to prevent access to route
+// router.get("/list", withAuth, async (req, res) => {
+//   try {
+//     // Find the logged in user based on the session ID
+//     const userData = await User.findByPk(req.session.user_id, {
+//       attributes: { exclude: ["password"] },
+//       include: [
+//         {
+//           model: ListItem,
+//           include: { model: Product }
+//         },
+
+//       ]
+//     });
+
+//     // const product = userData.listItems.product.map((product) => product.get({ plain: true}));
+//     const user = userData.get({ plain: true });
+//     console.log(user);
+
+//     res.render("list", {
+//       ...user,
+//       logged_in: true,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 router.get("/list", withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
+    const listItemData = await ListItem.findAll({
       include: [
         {
-          model: ListItem,
+          model: User,
+          attributes: { exclude: ["password"] },
+          where: { id: req.session.user_id },
         },
-        // {
-        //   model: Product,
-        //   attributes: ["id", "name"],
-        // },
-      ],
+        {
+          model: Product,
+        },
+
+      ]
     });
 
-    const user = userData.get({ plain: true });
+    // const product = userData.listItems.product.map((product) => product.get({ plain: true}));
+    const listItems = listItemData.map((listItem) => listItem.get({ plain: true }));
+    console.log(listItems);
 
     res.render("list", {
-      ...user,
+      ...listItems,
       logged_in: true,
     });
   } catch (err) {
@@ -72,6 +101,7 @@ router.get("/category/:id", async (req, res) => {
     });
 
     const category = categoryData.get({ plain: true });
+    console.log(category)
 
     res.render("category", { category, logged_in: req.session.logged_in });
   } catch (err) {
