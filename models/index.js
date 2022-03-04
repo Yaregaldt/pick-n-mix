@@ -20,4 +20,13 @@ Product.belongsTo(Category, {
   foreignKey: "category_id",
 });
 
+Product.hasMany(ListItem, {
+  foreignKey: "product_id",
+});
+
+ListItem.belongsTo(Product, {
+  foreignKey: "product_id",
+});
+
+
 module.exports = { User, Product, Category, ListItem };
