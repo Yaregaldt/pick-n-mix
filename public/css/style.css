@@ -1,5 +1,30 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: lightblue;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  padding: 15px;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 50;
+  padding: 40;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 20px;
+  background-color: #dbaeae;
 }
 
 main {
@@ -9,10 +34,10 @@ main {
 }
 
 .sidenav {
-  width: 130px;
-  position: absolute;
+  width: 110px;
+  position: fixed;
 
-  top: 166px;
+  top: 82px;
   left: 0px;
   background: rgb(235, 191, 191);
   overflow-x: hidden;
@@ -20,9 +45,9 @@ main {
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px 6px 10px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #e9edf0;
   display: block;
 }
@@ -63,10 +88,6 @@ header {
 
 .navbar a:hover {
   background-color: rgba(0, 0, 0, 0.918);
-}
-
-.active {
-  background-color: #0d37c0;
 }
 
 @media screen and (max-width: 500px) {
