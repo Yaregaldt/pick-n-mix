@@ -4,7 +4,6 @@ const withAuth = require("../utils/auth");
 
 // Route that displays all products to the homepage
 router.get("/", async (req, res) => {
-  console.log("Goodbye, world!")
   try {
     // Get all products and JOIN with user data
     const productData = await Product.findAll({

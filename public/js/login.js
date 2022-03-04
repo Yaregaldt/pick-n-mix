@@ -1,6 +1,7 @@
 // Log in function
 const loginForm = async (event) => {
-  event.preventDevault();
+  event.preventDefault();
+  console.log("hello");
 
   const email = document.querySelector("#email-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
@@ -22,7 +23,7 @@ const loginForm = async (event) => {
 
 // Sign up function
 const signupForm = async (event) => {
-  event.preventDevault();
+  event.preventDefault();
 
   console.log("Event handler working.");
   const first_name = document.querySelector("#first-name-signup").value.trim();
@@ -35,7 +36,13 @@ const signupForm = async (event) => {
     console.log("SIGNUP SUCCESSFUL....?");
     const response = await fetch("/api/users", {
       method: "POST",
-      body: JSON.stringify({ first_name, last_name, username, email, password }),
+      body: JSON.stringify({
+        first_name,
+        last_name,
+        username,
+        email,
+        password,
+      }),
       headers: { "Content-Type": "application/json" },
     });
 

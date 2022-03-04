@@ -12,4 +12,4 @@ const logout = async () => {
   }
 };
 
-document.querySelector("#edit-name").addEventListener("click", logout); // edit in name after
+document.querySelector("#logout").addEventListener("click", logout); // edit in name after
