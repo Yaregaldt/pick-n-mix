@@ -17,7 +17,7 @@ ListItem.init(
     },
     product_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       references: {
         model: "product",
         key: "id",
