@@ -19,26 +19,30 @@
 </head> 
 
 <body>
-
 <nav class="navbar navbar">
    <div class="container-fluid - bg-success ">
+
+
     <div class="navbar-header">
     <ul class="nav navbar-nav navbar-left">
       <a class="navbar-brand" href="#">🍃Pick N Mix🍃  </a>    
       <a class="navbar-brand" href="/list"> 🛒 Cart </a>                 
     </div>
     <ul class="nav navbar-nav navbar-right">
+
       {{#if logged_in}}
       <li><btn id="logout"><span class="glyphicon glyphicon-user"></span> Logout</btn></li>
       {{else}}
       <li><a href="/login"><span class="glyphicon glyphicon-user"></span> Sign Up / LogIn</a></li>
       {{/if}}
+
     </ul>
   </div>
 </nav>
     
 <aside>
   <div class="sidenav">
+
     <a href="#purpose">🍃Product list🍃</a><br /><br />
     <a href="/category/1">1</a>
     <a href="/category/2">2</a>
@@ -54,7 +58,9 @@
 </aside>
 
     <main>
+
      {{{body}}}
+
     </main>
     <!-- If the user is logged in, load the JS script for when they logout -->
     {{#if logged_in}}
