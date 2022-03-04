@@ -3,7 +3,8 @@
         "name": "Apple",
         "desc": "Juicy red apple used for cooking, eating raw or cider production",
         "price": 2.99,
-        "category_id": 1
+        "category_id": 1,
+        "image_id": "image file name"
     },
     {
         "name": "Banana",
