@@ -5,7 +5,7 @@ const newProductAdd = async (event) => {
   const quantity = document.querySelector("#edit-name").value.trim(); //add in quantity id
 
   if (product_id && quantity < 0) {
-    const response = await fetch("/api/list", {
+    const response = await fetch("/api/list/", {
       method: "POST",
       body: JSON.stringify({ quantity, product_id }),
       headers: { "Content-Type": "application/json" },
