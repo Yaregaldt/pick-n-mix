@@ -1,7 +1,7 @@
-<div id="container" class="container columns full screen">
-    <h2>{{catagory.name}}</h2>
+{{!-- <div id="container" class="container columns full screen">
+    <h2>{{category.name}}</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-        {{#each products as {{product}}
+        {{#each products as |product|}}
         <div class="col">
             <div class="card">
                 <div class="card-body">
@@ -14,4 +14,15 @@
                 </div>
             </div>
         </div>
+        {{/each}}
     </div>
+</div> --}}
+
+
+
+<div>
+    <p>This is the name: {{category.name}}</p>
+    {{#each categories as |category|}}
+    <p>This is a product price: {{category.product.price}}</p>
+    {{/each}}
+</div>

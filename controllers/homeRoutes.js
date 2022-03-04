@@ -41,10 +41,10 @@ router.get("/list", withAuth, async (req, res) => {
         {
           model: ListItem,
         },
-        {
-          model: Product,
-          attributes: ["id", "name"],
-        },
+        // {
+        //   model: Product,
+        //   attributes: ["id", "name"],
+        // },
       ],
     });
 
@@ -54,6 +54,26 @@ router.get("/list", withAuth, async (req, res) => {
       ...user,
       logged_in: true,
     });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Route to display a specific post by id and the comments associated with it
+router.get("/category/:id", async (req, res) => {
+  try {
+    const categoryData = await Category.findByPk(req.params.id, {
+      attributes: ["id", "name"],
+      include: [
+        {
+          model: Product,
+        },
+      ],
+    });
+
+    const category = categoryData.get({ plain: true });
+
+    res.render("category", { category, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
