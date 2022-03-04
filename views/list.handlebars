@@ -1,4 +1,21 @@
-<div class="dish-card">
-  <div class="dish-card-header">
-    {{dish_name}}
-  </div>
+<div id="container" class="container columns full screen">
+    <h2>{{name}}</h2>
+      <ol>
+        {{#each listitem as {{listitem}}
+        <div class="card">
+            <div class="card-header">
+                <h4><a href="product/{{this.id}}">{{this.listitem_name}}</a></h4>
+            </div>
+            <p id="listitem-desc">
+                {{this.desc}}
+            </p>
+            <p id="listitem-price">
+                {{this.price}}
+            </p>
+            <p id="product-category_id">
+                {{this.category_id}}
+            </p>
+        </div>
+      </ol>
+</div>
+
