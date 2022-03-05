@@ -42,13 +42,6 @@
         "image": "fennel.jpg"
     },
     {
-        "name": "Fennel",
-        "desc": "Fennel has a mild licorice flavor and can be thinly sliced and eaten raw or cooked",
-        "price": 4.75,
-        "category_id": 1,
-        "image": "fennel.jpg"
-    },  
-    {
         "name": "Chicken",
         "desc": "Chicken is the most common poultry in the world. used in variety of cuisine",
         "price": 7.99,
@@ -74,7 +67,7 @@
         "desc": "Nutrient rich for bone development",
         "price": 7.99,
         "category_id": 3,
-        "image": "salmon.jpg"
+        "image": "milk.jpg"
     },
     {
         "name": "Icecream",
@@ -97,8 +90,6 @@
         "category_id": 4,
         "image": "smarties.jpg"
     },
-
-
     {
         "name": "Ginger",
         "desc": "a flowering plant that is used as a spice. It can be eaten raw, cooked or used in herbal medicine",
@@ -168,5 +159,208 @@
         "price": 4.95,
         "category_id": 1,
         "image": "grapes.jpg"
+    },
+    {
+        "name": "beets",
+        "desc": "earthy and red",
+        "price": 5.76,
+        "category_id": 1,
+        "image": "beets.jpg"
+    },
+    {
+        "name": "blueberry",
+        "desc": "used in cake, jam, or eating raw",
+        "price": 2.33,
+        "category_id": 1,
+        "image": "blueberry.jpg"
+    },
+    {
+        "name": "Croccoli",
+        "desc": "used for wine, jam, or eating raw",
+        "price": 5.00,
+        "category_id": 1,
+        "image": "broccoli.jpg"
+    },
+    {
+        "name": "Cucumber",
+        "desc": "used for salads",
+        "price": 2.00,
+        "category_id": 1,
+        "image": "cucumber.jpg"
+    },
+    {
+        "name": "Green Beans",
+        "desc": "Eaten around the world and are sold fresh, canned or frozen",
+        "price": 5.00,
+        "category_id": 1,
+        "image": "greenbeans.jpg"
+    },
+    {
+        "name": "Garlic",
+        "desc": "bulbous flowering plant used ward off vampires. key ingredient in garlicbread",
+        "price": 5.00,
+        "category_id": 1,
+        "image": "garlic.jpg"
+    },
+    {
+        "name": "Lettuce",
+        "desc": "used as a base in salads",
+        "price": 3.00,
+        "category_id": 1,
+        "image": "lettuce.jpg"
+    },
+    {
+        "name": "Lemon",
+        "desc": "Citrus fruit",
+        "price": 6.00,
+        "category_id": 1,
+        "image": "lemon.jpg"
+    },
+    {
+        "name": "Limes",
+        "desc": "Green Citrus fruit",
+        "price": 6.00,
+        "category_id": 1,
+        "image": "limes.jpg"
+    },
+    {
+        "name": "Kale",
+        "desc": "Green leafy super food",
+        "price": 7.00,
+        "category_id": 1,
+        "image": "Kale.jpg"
+    },
+    {
+        "name": "Mushrooms",
+        "desc": "vegan meat",
+        "price": 2.00,
+        "category_id": 1,
+        "image": "mushrooms.jpg"
+    },
+    {
+        "name": "Mango",
+        "desc": "Best fruit ever",
+        "price": 1.00,
+        "category_id": 1,
+        "image": "mango.jpg"
+    },
+    {
+        "name": "Pear",
+        "desc": "woody fruit that can be consumed fresh, juiced or canned",
+        "price": 4.00,
+        "category_id": 1,
+        "image": "pear.jpg"
+    },
+    {
+        "name": "Onions",
+        "desc": "Used in dishes to make them savoury",
+        "price": 10.99,
+        "category_id": 1,
+        "image": "onions.jpg"
+    },
+    {
+        "name": "Parsley",
+        "desc": "used to garnish dishes",
+        "price": 2.66,
+        "category_id": 1,
+        "image": "parsley.jpg"
+    },
+    {
+        "name": "Peas",
+        "desc": "Used in pea soup or genetic experiments",
+        "price": 4.33,
+        "category_id": 1,
+        "image": "peas.jpg"
+    },
+    {
+        "name": "Pineapple",
+        "desc": "exotic fruit used in smoothies",
+        "price": 6.03,
+        "category_id": 1,
+        "image": "pineapple.jpg"
+    },
+    {
+        "name": "Pumpkin",
+        "desc": "Used in pie and halloween decorations",
+        "price": 7.00,
+        "category_id": 1,
+        "image": "pumpkin.jpg"
+    },
+    {
+        "name": "Strawberry",
+        "desc": "used for smoothies, jam, or eating raw",
+        "price": 8.00,
+        "category_id": 1,
+        "image": "strawberry.jpg"
+    },
+    {
+        "name": "Watermelon",
+        "desc": "used for smoothies, cook outs, or eating raw",
+        "price": 5.00,
+        "category_id": 1,
+        "image": "watermelon.jpg"
+    },
+    {
+        "name": "Kiwi Fruit",
+        "desc": "Fuzzy outside, delicious inside",
+        "price": 4.00,
+        "category_id": 1,
+        "image": "kiwi.jpg"
+    },
+    {
+        "name": "Tomatoes",
+        "desc": "botanically classified as berries and provide an umami flavour in vegetable dishes",
+        "price": 5.00,
+        "category_id": 1,
+        "image": "tomatoes.jpg"
+    },
+    {
+        "name": "Tomatoes",
+        "desc": "botanically classified as berries and provide an umami flavour in vegetable dishes",
+        "price": 5.00,
+        "category_id": 1,
+        "image": "tomatoes.jpg"
+    },
+    {
+        "name": "Jawbreakers",
+        "desc": "Patience testing candy",
+        "price": 0.99,
+        "category_id": 4,
+        "image": "jawbreakers.jpg"
+    },
+    {
+        "name": "LaffyTaffy",
+        "desc": "Taffy ",
+        "price": 2.99,
+        "category_id": 4,
+        "image": "laffytaffy.jpg"
+    },
+    {
+        "name": "Nerds",
+        "desc": "Crunchy candy made by Willy Wonka",
+        "price": 2.99,
+        "category_id": 4,
+        "image": "nerds.jpg"
+    },
+    {
+        "name": "Poprocks",
+        "desc": "Candy that goes great with fizzy drinks",
+        "price": 1.99,
+        "category_id": 4,
+        "image": "poprocks.jpg"
+    },
+    {
+        "name": "Skittles",
+        "desc": "Fruit flavoured button-shaped candy",
+        "price": 1.35,
+        "category_id": 4,
+        "image": "skittles.jpg"
+    },
+    {
+        "name": "Starburst",
+        "desc": "box shaped taffy candy",
+        "price": 3.99,
+        "category_id": 4,
+        "image": "starburst.jpg"
     }
 ]
