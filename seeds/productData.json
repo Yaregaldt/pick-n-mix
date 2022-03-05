@@ -4,98 +4,98 @@
         "desc": "Juicy red apple used for cooking, eating raw or cider production",
         "price": 2.99,
         "category_id": 1,
-        "image_id": "apple.jpg"
+        "image": "apple.jpg"
     },
     {
         "name": "Banana",
         "desc": "Curved yellow fruit",
         "price": 10.00,
         "category_id": 1,
-        "image_id": "banana.jpg"
+        "image": "banana.jpg"
     },
     {
         "name": "Cabbage",
         "desc": "thick green or purple leaves surrounding a spherical heart or head of young leaves",
         "price": 4.99,
         "category_id": 1,
-        "image_id": "cabbage.jpg"
+        "image": "cabbage.jpg"
     },
     {
         "name": "Dill",
         "desc": "Herb used in pickling",
         "price": 1.99,
         "category_id": 1,
-        "image_id": "dill.jpg"
+        "image": "dill.jpg"
     },
     {
         "name": "Eggplant",
         "desc": "Eggplants are similar to summer squash or zucchini: tender, mild, and sweet with a slight vegetal bitterness",
         "price": 5.99,
         "category_id": 1,
-        "image_id": "eggplant.jpg"
+        "image": "eggplant.jpg"
     },
     {
         "name": "Fennel",
         "desc": "Fennel has a mild licorice flavor and can be thinly sliced and eaten raw or cooked",
         "price": 4.75,
         "category_id": 1,
-        "image_id": "fennel.jpg"
+        "image": "fennel.jpg"
     },
     {
         "name": "Fennel",
         "desc": "Fennel has a mild licorice flavor and can be thinly sliced and eaten raw or cooked",
         "price": 4.75,
         "category_id": 1,
-        "image_id": "fennel.jpg"
+        "image": "fennel.jpg"
     },  
     {
         "name": "Chicken",
         "desc": "Chicken is the most common poultry in the world. used in variety of cuisine",
         "price": 7.99,
         "category_id": 2,
-        "image_id": "chicken.jpg"
+        "image": "chicken.jpg"
     },
     {
         "name": "Beef",
         "desc": "Beef contains protein, iron, and vitamin B12. Beef is used in steak ",
         "price": 15.99,
         "category_id": 2,
-        "image_id": "beef.jpg"
+        "image": "beef.jpg"
     },
     {
         "name": "Salmon",
         "desc": "Wild Atlantic Salmon. Maybe used in variety of seafood dishes and logos",
         "price": 20.00,
         "category_id": 2,
-        "image_id": "salmon.jpg"
+        "image": "salmon.jpg"
     },
     {
         "name": "Milk",
         "desc": "Nutrient rich for bone development",
         "price": 7.99,
         "category_id": 3,
-        "image_id": "salmon.jpg"
+        "image": "salmon.jpg"
     },
     {
         "name": "Icecream",
         "desc": "Sweetened frozen food comes in a variety of flavours",
         "price": 8.00,
         "category_id": 3,
-        "image_id": "icecream.jpg"
+        "image": "icecream.jpg"
     },
     {
         "name": "Kitkat",
         "desc": "chocolate covered wafer bar",
         "price": 2.99,
         "category_id": 4,
-        "image_id": "kitkat.jpg"
+        "image": "kitkat.jpg"
     },
     {
         "name": "Smarties",
         "desc": "colour-varied sugar-coated chocolate confectioner",
         "price": 1.99,
         "category_id": 4,
-        "image_id": "smarties.jpg"
+        "image": "smarties.jpg"
     },
 
 
@@ -104,69 +104,69 @@
         "desc": "a flowering plant that is used as a spice. It can be eaten raw, cooked or used in herbal medicine",
         "price": 3.99,
         "category_id": 1,
-        "image_id": "ginger.jpg"
+        "image": "ginger.jpg"
     },
     {
         "name": "Ham",
         "desc": "pork from a leg cut that has been preserved by curing",
         "price": 15.95,
         "category_id": 2,
-        "image_id": "ham.jpg"
+        "image": "ham.jpg"
     },
     {
         "name": "Potato",
         "desc": "starchy root vegetable as a base in variety of dishes",
         "price": 5.99,
         "category_id": 1,
-        "image_id": "potato.jpg"
+        "image": "potato.jpg"
     },
     {
         "name": "Carrot",
         "desc": "orange root vegetable used in meals or salads",
         "price": 4.25,
         "category_id": 1,
-        "image_id": "carrot.jpg"
+        "image": "carrot.jpg"
     },
     {
         "name": "Cheese",
         "desc": "protein and fats from milk in a variety of flavors",
         "price": 7.88,
         "category_id": 3,
-        "image_id": "cheese.jpg"
+        "image": "cheese.jpg"
     },
     {
         "name": "Yogurt",
         "desc": "fermentation of sugars in milk",
         "price": 7.99,
         "category_id": 3,
-        "image_id": "yogurt.jpg"
+        "image": "yogurt.jpg"
     },
     {
         "name": "Butter",
         "desc": "churned milk that is semi solid at room temperature",
         "price": 6.99,
         "category_id": 3,
-        "image_id": "butter.jpg"
+        "image": "butter.jpg"
     },
     {
         "name": "Gummy bears",
         "desc": "bear shaped gummy snack",
         "price": 2.99,
         "category_id": 4,
-        "image_id": "gummybears.jpg"
+        "image": "gummybears.jpg"
     },
     {
         "name": "Avocado",
         "desc": "Single seed large berry that is creamy in texture",
         "price": 4.95,
         "category_id": 1,
-        "image_id": "avocado.jpg"
+        "image": "avocado.jpg"
     },
     {
         "name": "grapes",
         "desc": "used for wine, jam, or eating raw",
         "price": 4.95,
         "category_id": 1,
-        "image_id": "grapes.jpg"
+        "image": "grapes.jpg"
     }
 ]
