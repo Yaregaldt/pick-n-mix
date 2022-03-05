@@ -1,19 +1,22 @@
-<div id="container" class="container columns full screen">
-    <h2>{{category.name}}</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        {{#each category.products as |product|}}
-        <div class="col md-5">
-            {{!-- <img src="/images/{{this.image}}" alt="{{this.name}}"> --}}
-            <div class="col-md-7">
-                <h4><a href="product/{{this.id}}">{{this.name}}</a></h4>
-            </div>
-            <div class="col-md-9">
+<div class="row justify-content-center item-choice">
+    <nav class="navbar" id="navbar">
+        <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">{{category.name}}</span>
+    </nav>
+    {{#each category.products as |product|}}
+    <div class="card" style="width: 15rem;">
+        <img src="/images/{{this.image}}" alt="{{this.name}}">
+        <h4><a href="product/{{this.id}}">{{this.name}}</a></h4>
+        <div id="product" data-id="{{this.id}}"></div>
+        <div class="card-body">
+            {{!-- <button id="{{this.id}}">+</button> --}}
+            {{!-- q --}}
 
-                <button class="btn btn-outline-secondary" type="button" id="button-add">+</button>
-                <button class="btn btn-outline-secondary" type="button" id="button-minus">-</button>
-                <button class="btn btn-outline-secondary" type="button" id="add-list">Add to list</button>
-            </div>
+            <input id="quantity-val{{this.id}}" data-id="{{this.id}}" name="quantity-val" type="number"
+                pattern="/^-?\d+\.?\d*$/" onkeypress="if(this.value.length ===3) return false;" />
+            {{!-- <button data-id="{{this.id}}">-</button> --}}
+            <button class="{{this.id}}">Add to list</button>
         </div>
-        {{/each}}
     </div>
+    {{/each}}
+
 </div>
