@@ -1,72 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <title>Pick N mix</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+<<html lang="en">
+  <head>
+    <title>Ultimate Shopping Experience</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-   <link rel="stylesheet" type="text/css" href="/css/jass.css" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="/css/jass.css"></script>
 
-</head> 
-
+  </head>
+</head>
 <body>
-<nav class="navbar navbar">
-   <div class="container-fluid - bg-success ">
 
+<div class="header">
+  <h1>Welcome to the Ultimate Shopping Experience!! </h1>
+  <p> <b>ALWAYS</b> <img src="/images/fresh.png" alt="Fresh produce" width="40" height="40"</p>
+</div>
 
-    <div class="navbar-header">
-    <ul class="nav navbar-nav navbar-left">
-      <a class="navbar-brand" href="#">🍃Pick N Mix🍃  </a>    
-      <a class="navbar-brand" href="/list"> 🛒 Cart </a>                 
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-
-      {{#if logged_in}}
-      <li><btn id="logout"><span class="glyphicon glyphicon-user"></span> Logout</btn></li>
+<div class="navbar">
+  <a href="#" class="active">Produuce</a>
+  <a href="#">Meat</a>
+  <a href="#">Dairy</a>
+  <a href="#" >Snacks</a>
+  
+  <!-- If the user is logged in, show a logout button -->
+      {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
-      <li><a href="/login"><span class="glyphicon glyphicon-user"></span> Sign Up / LogIn</a></li>
+        <!-- Otherwise, show a link to login -->
+        <a href="/login" class ="left">Login</a>
       {{/if}}
+</div>
 
-    </ul>
-  </div>
-</nav>
+<div class="container-fluid">
+  
+  <div class="main">
+    <h2> We stopped writting lorem epsum as we gained the skill writing </b>promising</b> content :)
+    You all deserve a happy Saturday as you have been doing day and night to make this app functional! Hi fellas, any new arrivals to your store!?</h2>
     
-<aside>
-  <div class="sidenav">
+ </div>
 
-    <a href="#purpose">🍃Product list🍃</a><br /><br />
-    <a href="/category/1">1</a>
-    <a href="/category/2">2</a>
-    <a href="#orderNo">3</a>
-    <a href="#orderNo">4</a>
-    <a href="#orderNo">5</a>
-    <a href="#orderNo">6</a>
-    <a href="#orderNo">7</a>
-    <a href="#orderNo">8</a>
-    <a href="#orderNo">9</a>
-    <a href="#orderNo">10</a>
-  </div>
-</aside>
-
-    <main>
-
-     {{{body}}}
-
-    </main>
-    <!-- If the user is logged in, load the JS script for when they logout -->
-    {{#if logged_in}}
+{{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
 
 </body>
-
 </html>
