@@ -2,28 +2,18 @@
     <h2>{{category.name}}</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {{#each category.products as |product|}}
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-title">
-                        <h4><a href="product/{{this.id}}">{{this.name}}</a></h4>
-                        <p class="card-text">
-                            {{this.desc}}
-                        </p>
-                    </div>
-                </div>
+        <div class="col md-5">
+            {{!-- <img src="/images/{{this.image}}" alt="{{this.name}}"> --}}
+            <div class="col-md-7">
+                <h4><a href="product/{{this.id}}">{{this.name}}</a></h4>
+            </div>
+            <div class="col-md-9">
+
+                <button class="btn btn-outline-secondary" type="button" id="button-add">+</button>
+                <button class="btn btn-outline-secondary" type="button" id="button-minus">-</button>
+                <button class="btn btn-outline-secondary" type="button" id="add-list">Add to list</button>
             </div>
         </div>
         {{/each}}
     </div>
 </div>
-
-
-
-{{!-- <div>
-    <p>This is the name: {{category.name}}</p>
-    {{#each category.products as |product|}}
-    <p>This is the product price: {{product.price}}</p>
-    {{/each}}
-
-</div> --}}
