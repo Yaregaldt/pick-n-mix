@@ -1,57 +1,51 @@
-<<html lang="en">
-  <head>
-    <title>Ultimate Shopping Experience</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-    ></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="/css/jass.css"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-  </head>
+<head>
+  <title>Ultimate Shopping Experience</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+
 </head>
+
 <body>
 
-<div class="header">
-  <h1>Welcome to the Ultimate Shopping Experience!! </h1>
-  <p> <b>ALWAYS</b> <img src="/images/fresh.png" alt="Fresh produce" width="40" height="40"</p>
-</div>
+  <div class="header">
+    <h1>Welcome to the Ultimate Shopping Experience!! </h1>
+    <p> <b>ALWAYS</b> <img src="/images/fresh.png" alt="Fresh produce" width="40" height="40" </p>
+  </div>
 
-<div class="navbar">
-  <a href="#" class="active">Produuce</a>
-  <a href="#">Meat</a>
-  <a href="#">Dairy</a>
-  <a href="#" >Snacks</a>
-  
-  <!-- If the user is logged in, show a logout button -->
-      {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
-      {{else}}
-        <!-- Otherwise, show a link to login -->
-        <a href="/login" class ="left">Login</a>
-      {{/if}}
-</div>
+  <div class="navbar">
+    <a href="/category/1">Produce</a>
+    <a href="category/2">Meat</a>
+    <a href="/category/3">Dairy</a>
+    <a href="/category/4">Snacks</a>
 
-<div class="container-fluid">
-  
-  <div class="main">
-    <h2> We stopped writting lorem epsum as we gained the skill writing </b>promising</b> content :)
-    You all deserve a happy Saturday as you have been doing day and night to make this app functional! Hi fellas, any new arrivals to your store!?</h2>
-    
- </div>
+    <!-- If the user is logged in, show a logout button -->
+    {{#if logged_in}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <!-- Otherwise, show a link to login -->
+    <a href="/login" class="left">Login</a>
+    {{/if}}
+  </div>
 
-{{#if loggedIn}}
-      <script src="/js/logout.js"></script>
+  <div class="container-fluid">
+
+    <main>
+      {{{ body }}}
+    </main>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
     {{/if}}
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

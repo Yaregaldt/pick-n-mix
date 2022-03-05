@@ -54,7 +54,7 @@ app.use(routes);
 //===============================================
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log(`App is running on port ${PORT}`));
-  });
+  app.listen(PORT, () => console.log(`App is running on port ${PORT}`));
+});
 
 //we want our app to listen to a certain port during development but by default we will use 3001.
