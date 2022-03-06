@@ -1,23 +1,32 @@
 <h1 class="text-center">Here is your shopping list.</h1>
 
 {{#if listItems}}
-<div class="d-flex flex-wrap justify-content-center">
+<div class="d-flex flex-wrap justify-content-center item-choice">
     <ol class="list-group list-group-numbered" style="width: 40rem;">
         {{#each listItems as |listItem|}}
         <li class="list-group-item d-flex justify-content-between align-items-start">
             <div class="mt-3 ms-2 me-auto">
                 <img src="/images/{{listItem.product.image}}" style="width: 35px; height: 35px;">
                 <div class="fw-bold">{{listItem.product.name}} x {{listItem.quantity}}</div>
-                <p>Total price&colon; &dollar;{{listItem.quantity}} * {{listItem.product.price}}.<p>
+                <p>Total price&colon; &dollar;{{listItem.quantity}} * {{listItem.product.price}}.
+                <p>
             </div>
-            <button class="btn btn-danger">Delete</button>
+            <p>{{this.product_id}}</p>
+            {{!-- <button class="btn btn-danger" data-id="{{this.id}}">-</button>
+            <input value="{{listItem.quantity}}" id="quantity-val{{this.id}}" data-id="{{this.product_id}}"
+                type="number" pattern="/^-?\d+\.?\d*$/" onkeypress="if(this.value.length ===3) return false;"
+                style="width: 5rem;" />
+            <button class="btn btn-success" value="{{this.product_id}}">+</button>
+            <button name="{{this.product_id}}" class="btn color-green m-3">Add to List</button><br> --}}
+            <button class="btn btn-danger" name="{{this.id}}">Delete</button>
         </li>
         {{/each}}
         <div class="text-center m-4">
-            <button class="btn btn-danger" style="width: 10rem;">Clear All</button>
+            <button id="hello" class="btn btn-danger" style="width: 10rem;">Clear All</button>
         </div>
     </ol>
 </div>
 {{else}}
 Nothing here. Start adding some stuff?
 {{/if}}
+<script src="/js/list.js"></script>

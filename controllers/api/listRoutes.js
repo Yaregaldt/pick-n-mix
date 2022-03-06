@@ -4,21 +4,17 @@ const withAuth = require("../../utils/auth");
 
 router.post("/", withAuth, async (req, res) => {
   console.log("Post req successful!");
-  if (withAuth) {
-    try {
-      const newListItem = await ListItem.create({
-        quantity: req.body.quantity,
-        product_id: req.body.product_id,
-        user_id: req.session.user_id,
-      });
-      console.log("Post req successful2!");
-      res.status(200).json(newListItem);
-    } catch (err) {
-      console.log("Post req successful3!");
-      res.status(400).json(err);
-    }
-  } else {
-    document.location.replace("/profile");
+  try {
+    const newListItem = await ListItem.create({
+      quantity: req.body.quantity,
+      product_id: req.body.product_id,
+      user_id: req.session.user_id,
+    });
+    console.log("Post req successful2!");
+    res.json(newListItem);
+  } catch (err) {
+    console.log("Post req successful3!");
+    res.status(400).json(err);
   }
 });
 
@@ -51,12 +47,30 @@ router.delete("/:id", withAuth, async (req, res) => {
     const listItemData = await ListItem.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
 
     if (!listItemData) {
       res.status(404).json({ message: "No list item found with this id!" });
+      return;
+    }
+
+    res.status(200).json(listItemData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.delete("/", withAuth, async (req, res) => {
+  try {
+    const listItemData = await ListItem.destroy({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!listItemData) {
+      res.status(404).json({ message: "No list items found with this id!" });
       return;
     }
 

@@ -20,39 +20,44 @@ const updateProduct = async (event) => {
 };
 
 const deleteProduct = async (event) => {
-  // make sure to check name
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id"); // check name
-    // check name
-    const response = await fetch(`/api/listitem/${id}`, {
-      // path needs to be updated
-      method: "DELETE",
-    });
+  if (event.target.hasAttribute("name")) {
+    const quantity_value = event.target.getAttribute("name");
+    const product_id = parseInt(event.target.getAttribute("name"));
 
-    if (response.ok) {
-      document.location.replace("/api/list"); //To refresh page double check path
+    valueSelector = `#quantity-val${quantity_value}`;
+    // const quantity = parseInt(document.querySelector(`${valueSelector}`).value);
+
+    if (product_id) {
+      const response = await fetch(`/api/list/${product_id}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        window.location.reload();
+      }
     } else {
-      alert("Failed to delete product from list");
+      alert("Failed to add product to list");
     }
   }
 };
 
-const deleteList = async (event) => {
-  //check name
-
+const deleteList = async () => {
+  console.log("working?");
   if (confirm("Cick okay to clear your list.") == true) {
-    const response = await fetch(`/api/list/${id}`, {
+    const response = await fetch("/api/list/", {
       //path needs to be updated
       method: "DELETE",
     });
     if (response.ok) {
-      document.location.replace("/api/list");
+      document.location.replace("/list");
     }
   }
 };
 
-document.querySelectory(".edit-name").addEventListener("submit", updateProduct); // add in name
+// document.querySelectory(".edit-name").addEventListener("submit", updateProduct);
 
-document.querySelector(".edit-name").addEventListener("click", deleteProduct); // add in name
+// document.querySelector(".edit-name").addEventListener("click", deleteProduct);
 
-document.querySelector(".edit-name").addEventListener("click", deleteList); //add in mame
+document.querySelector("#hello").addEventListener("click", deleteList); //add in mame
+
+document.querySelector(".item-choice").addEventListener("click", deleteProduct);
