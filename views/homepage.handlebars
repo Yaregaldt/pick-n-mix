@@ -1,15 +1,33 @@
-<div class="flex-column justify-space-around">
-    <div class="col-md-5">
-        <h2>
-            WELCOME TO THE ULTIMATE ONLINE SHOPPING EXPERIENCE!
-        </h2>
-        <p>
-            Check out the links on the side to view all products.
-            <br>
-            Login in order to be able to save your products to a list.
-        </p>
-        <div class="product-cards">
-            <p>Insert some products in here??</p>
-        </div>
-    </div>
-</div>
+            {{#if logged_in}}
+            <h1 class="text-center">Welcome, to <span class="brand-font">Pick &amp; Mix</span>, {{user.first_name}}!</h1>
+            {{else}}
+            <h1 class="text-center">Welcome to Pick &amp; Mix! Please sign in.</h1>
+            {{/if}}
+            
+            <!-- Search Bar -->
+            <div class="container mb-4">
+                <div class="row height d-flex justify-content-center align-items-center">
+                    <div class="col-md-8">
+                        <div class="search"> <i class="fa fa-search"></i>
+                            <input type="search" placeholder="Want to search for a specific product?" class="form-control searchbox-input" name="search" onkeyup="buttonUp();" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product cards -->
+            <div class="d-flex flex-wrap justify-content-center">
+
+                {{#each products as |product|}}
+                <div class="card mb-4 mx-3 shadow" style="width: 20rem;">
+                    <img src="/images/{{product.image}}" class="card-img-top" alt="{{this.name}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">{{this.desc}}</p>
+                        <input id="quantity-val{{this.id}}" data-id="{{this.id}}" type="number" pattern="/^-?\d+\.?\d*$/" onkeypress="if(this.value.length ===3) return false;" />
+                        <button name="{{this.id}}" class="btn color-green">Add to List</button>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>

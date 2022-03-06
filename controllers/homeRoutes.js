@@ -11,21 +11,29 @@ router.get("/", async (req, res) => {
         {
           model: Category,
         },
-        // {
-        //   model: User,
-        //   attributes: ["id", "username"],
-        // },
       ],
     });
-
+  
     // Serialize data so the template can read it
     const products = productData.map((product) => product.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render("homepage", {
-      products,
-      logged_in: req.session.logged_in,
+    if (req.session.logged_in) {
+
+      const userData = await User.findByPk(req.session.user_id);
+      const user = userData.get({ plain: true});
+
+      res.render("homepage", {
+        products, 
+        user,
+        logged_in: req.session.logged_in,
     });
+    } else {
+      res.render("homepage", {
+        products, 
+        logged_in: req.session.logged_in,
+      });
+    }
   } catch (err) {
     res.status(500).json(err);
   }
