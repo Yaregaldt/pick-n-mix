@@ -12,13 +12,13 @@
                 <p>
             </div>
             <p>{{this.product_id}}</p>
-            {{!-- <button class="btn btn-danger" data-id="{{this.id}}">-</button>
+            {{!-- <button class="btn btn-danger" data-id="{{this.id}}">-</button> --}}
             <input value="{{listItem.quantity}}" id="quantity-val{{this.id}}" data-id="{{this.product_id}}"
                 type="number" pattern="/^-?\d+\.?\d*$/" onkeypress="if(this.value.length ===3) return false;"
                 style="width: 5rem;" />
-            <button class="btn btn-success" value="{{this.product_id}}">+</button>
-            <button name="{{this.product_id}}" class="btn color-green m-3">Add to List</button><br> --}}
-            <button class="btn btn-danger" name="{{this.id}}">Delete</button>
+            {{!-- <button class="btn btn-success" value="{{this.product_id}}">+</button> --}}
+            <button id="update" name="{{this.product_id}}" class="btn color-green m-3">Update</button><br>
+            <button class="btn btn-danger" id="bye" name="{{this.id}}">Delete</button>
         </li>
         {{/each}}
         <div class="text-center m-4">
