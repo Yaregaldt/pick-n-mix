@@ -30,7 +30,9 @@ const productClick = async (event) => {
         body: JSON.stringify({ quantity, product_id }),
         headers: { "Content-Type": "application/json" },
       });
+
       if (response.ok) {
+        document.querySelector(`${valueSelector}`).value = "0";
         alert("Item added");
       }
     } else {
