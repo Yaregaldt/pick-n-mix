@@ -12,6 +12,12 @@ const session = require("express-session");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
+dayjs = require("dayjs");
+
+let now = dayjs();
+
+console.log(now.format());
+
 //2. SET UP THE EXPRESS SERVER:
 const app = express();
 const PORT = process.env.PORT || 3001;

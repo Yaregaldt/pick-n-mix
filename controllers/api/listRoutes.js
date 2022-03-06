@@ -19,14 +19,16 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 router.put("/:id", withAuth, async (req, res) => {
+  console.log("put route");
+  console.log(req.body);
   try {
-    const listItemData = await Post.update(
+    const listItemData = await ListItem.update(
       {
         quantity: req.body.quantity,
       },
       {
         where: {
-          id: req.params.id,
+          id: req.body.id,
         },
       }
     );
