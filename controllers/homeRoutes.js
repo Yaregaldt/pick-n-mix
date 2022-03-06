@@ -13,24 +13,23 @@ router.get("/", async (req, res) => {
         },
       ],
     });
-  
+
     // Serialize data so the template can read it
     const products = productData.map((product) => product.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     if (req.session.logged_in) {
-
       const userData = await User.findByPk(req.session.user_id);
-      const user = userData.get({ plain: true});
+      const user = userData.get({ plain: true });
 
       res.render("homepage", {
-        products, 
+        products,
         user,
         logged_in: req.session.logged_in,
-    });
+      });
     } else {
       res.render("homepage", {
-        products, 
+        products,
         logged_in: req.session.logged_in,
       });
     }
@@ -79,16 +78,17 @@ router.get("/list", withAuth, async (req, res) => {
         {
           model: Product,
         },
-
-      ]
+      ],
     });
 
     // const product = userData.listItems.product.map((product) => product.get({ plain: true}));
-    const listItems = listItemData.map((listItem) => listItem.get({ plain: true }));
+    const listItems = listItemData.map((listItem) =>
+      listItem.get({ plain: true })
+    );
     console.log(listItems);
 
     res.render("list", {
-      ...listItems,
+      listItems,
       logged_in: true,
     });
   } catch (err) {
@@ -109,7 +109,7 @@ router.get("/category/:id", async (req, res) => {
     });
 
     const category = categoryData.get({ plain: true });
-    console.log(category)
+    console.log(category);
 
     res.render("category", { category, logged_in: req.session.logged_in });
   } catch (err) {

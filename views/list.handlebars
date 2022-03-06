@@ -1,4 +1,3 @@
-
 <h1 class="text-center">Here is your shopping list.</h1>
 
 <div class="d-flex flex-wrap justify-content-center">
@@ -7,7 +6,7 @@
         <li class="list-group-item d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
                 <div class="fw-bold">{{listItem.product.name}}</div>
-                Quantity&colon; &dollar;{{listItem.quantity}} + {{listItem.product.price}}.
+                Total price&colon; &dollar;{{listItem.quantity}} * {{listItem.product.price}}.
             </div>
             <button class="btn btn-danger">Delete</button>
         </li>

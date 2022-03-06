@@ -3,7 +3,8 @@
     <div class="row height d-flex justify-content-center align-items-center">
         <div class="col-md-8">
             <div class="search"> <i class="fa fa-search"></i>
-                <input type="search" placeholder="Want to search for a specific product?" class="form-control searchbox-input" name="search" onkeyup="buttonUp();" required>
+                <input type="search" placeholder="Want to search for a specific product?"
+                    class="form-control searchbox-input" name="search" onkeyup="buttonUp();" required>
             </div>
         </div>
     </div>
@@ -20,7 +21,8 @@
             <h5 class="card-title">{{this.name}}</h5>
             <p class="card-text">{{this.desc}}</p>
             <button class="btn btn-success" value="{{this.id}}">+</button>
-            <input id="quantity-val{{this.id}}" data-id="{{this.id}}" type="number" pattern="/^-?\d+\.?\d*$/" onkeypress="if(this.value.length ===3) return false;" />
+            <input value="0" id="quantity-val{{this.id}}" data-id="{{this.id}}" type="number" pattern="/^-?\d+\.?\d*$/"
+                onkeypress="if(this.value.length ===3) return false;" />
             <button class="btn btn-danger" data-id="{{this.id}}">-</button>
             <button name="{{this.id}}" class="btn color-green m-3">Add to List</button>
         </div>
