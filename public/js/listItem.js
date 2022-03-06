@@ -56,4 +56,6 @@ const minusProduct = async (event) => {
   }
 };
 
+
+
 document.querySelector(".item-choice").addEventListener("click", minusProduct);
