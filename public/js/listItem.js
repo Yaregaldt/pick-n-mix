@@ -43,4 +43,6 @@ const productClick = async (event) => {
   }
 };
 
+
 document.querySelector(".item-choice").addEventListener("click", productClick);
+

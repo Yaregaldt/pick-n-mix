@@ -1,28 +1,16 @@
-{{!-- <div id="container" class="container columns full screen">
-    <h2>{{name}}</h2>
-      <ol>
-        {{#each listitem as {{listitem}}
-        <div class="card">
-            <div class="card-header">
-                <h4><a href="product/{{this.id}}">{{this.listitem_name}}</a></h4>
+
+<h1 class="text-center">Here is your shopping list.</h1>
+
+<div class="d-flex flex-wrap justify-content-center">
+    <ol class="list-group list-group-numbered" style="width: 40rem;">
+        {{#each listItems as |listItem|}}
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">{{listItem.product.name}}</div>
+                Quantity&colon; &dollar;{{listItem.quantity}} + {{listItem.product.price}}.
             </div>
-            <p id="listitem-desc">
-                {{this.desc}}
-            </p>
-            <p id="listitem-price">
-                {{this.price}}
-            </p>
-            <p id="product-category_id">
-                {{this.category_id}}
-            </p>
-        </div>
-      </ol>
-</div> --}}
-
-
-{{!-- Update List Item button --}}
-<div class="update-button" type="button" onclick="alert('Purchase added to list')">Add Item to List</button>></div>
-
-{{!-- Delete Button --}}
-<div class="delete-button" type="button" onclick="alert('Purchase Deleted')">Delete Purchase</button>></div>
-
+            <button class="btn btn-danger">Delete</button>
+        </li>
+        {{/each}}
+    </ol>
+</div>
