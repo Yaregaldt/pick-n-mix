@@ -1,45 +1,32 @@
-// var quantityVal = document.querySelector("#quantity-val");
-
-// quantityVal.onkeypress = function (e) {
-//   console.log(e);
-//   var maxlengthNumber = parseInt(quantityVal.getAttribute("maxlength"));
-//   var inputValueLength = quantityVal.value.length + 1;
-//   if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-//     return false;
-//   }
-//   if (maxlengthNumber < inputValueLength) {
-//     return false;
-//   }
-// };
-
-const minusProduct = async (event) => {
+const productClick = async (event) => {
   event.preventDefault();
 
-  // if (event.target.hasAttribute("data-id")) {
-  //   document.querySelector("#quantity-val")
-  //   minus = event.target.getAttribute("data-id");
-  //   console.log("minus" + minus);
-  //   quantityVal--;
-  //   document.querySelector("#quantit-val").value = quantityVal;
-  // }
+  if (event.target.hasAttribute("value")) {
+    const value = event.target.getAttribute("value");
+    valueSelector = `#quantity-val${value}`;
+    var quantity = parseInt(document.querySelector(`${valueSelector}`).value);
+    quantity++;
+    document.querySelector(`${valueSelector}`).value = quantity;
+  }
 
-  // if (event.target.hasAttribute("id")) {
-  //   console.log("add");
-  //   quantityVal++;
-  // }
+  if (event.target.hasAttribute("data-id")) {
+    const value = event.target.getAttribute("data-id");
+    valueSelector = `#quantity-val${value}`;
+    var quantity = parseInt(document.querySelector(`${valueSelector}`).value);
+    if (quantity > 0) {
+      quantity--;
+    }
+    document.querySelector(`${valueSelector}`).value = quantity;
+  }
 
-  if (event.target.hasAttribute("class")) {
-    console.log("sumbit");
-    const quantity_value = event.target.getAttribute("class");
-    const product_id = parseInt(event.target.getAttribute("class"));
+  if (event.target.hasAttribute("name")) {
+    const quantity_value = event.target.getAttribute("name");
+    const product_id = parseInt(event.target.getAttribute("name"));
 
-    console.log(product_id);
     valueSelector = `#quantity-val${quantity_value}`;
     console.log(valueSelector);
     const quantity = parseInt(document.querySelector(`${valueSelector}`).value);
 
-    console.log(product_id);
-    console.log(quantity);
     if (product_id && quantity > 0) {
       console.log("working?");
       const response = await fetch("/api/list/", {
@@ -56,4 +43,4 @@ const minusProduct = async (event) => {
   }
 };
 
-document.querySelector(".item-choice").addEventListener("click", minusProduct);
+document.querySelector(".item-choice").addEventListener("click", productClick);

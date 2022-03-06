@@ -6,15 +6,12 @@
     <div class="card" style="width: 15rem;">
         <img src="/images/{{this.image}}" alt="{{this.name}}">
         <h4><a href="product/{{this.id}}">{{this.name}}</a></h4>
-        <div id="product" data-id="{{this.id}}"></div>
         <div class="card-body">
-            {{!-- <button id="{{this.id}}">+</button> --}}
-            {{!-- q --}}
-
-            <input id="quantity-val{{this.id}}" data-id="{{this.id}}" name="quantity-val" type="number"
-                pattern="/^-?\d+\.?\d*$/" onkeypress="if(this.value.length ===3) return false;" />
-            {{!-- <button data-id="{{this.id}}">-</button> --}}
-            <button class="{{this.id}}">Add to list</button>
+            <button value="{{this.id}}">+</button>
+            <input id="quantity-val{{this.id}}" type="number" value="0" pattern="/^-?\d+\.?\d*$/"
+                onkeypress="if(this.value.length ===3) return false;" />
+            <button data-id="{{this.id}}">-</button>
+            <button name="{{this.id}}">Add to list</button>
         </div>
     </div>
     {{/each}}
