@@ -31,7 +31,7 @@ Alternatively, check out the deployed Heroku link if you wish to utilize the sit
 ## Example
 
 ### Screenshot
-![1st screenshot of project deployed](./images/app1.png)
+![Pick n Mix homepage](./images/app1.png)
 
 ## License
 

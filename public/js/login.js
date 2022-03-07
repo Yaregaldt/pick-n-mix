@@ -16,7 +16,7 @@ const loginForm = async (event) => {
     if (response.ok) {
       document.location.replace("/"); //Send to homepage
     } else {
-      // alert(response.statusText);
+      $("#failed-login").modal("show");
     }
   }
 };
@@ -49,7 +49,7 @@ const signupForm = async (event) => {
     if (response.ok) {
       document.location.replace("/"); //Send back to homepage
     } else {
-      // alert(response.statusText);
+      $("#failed-signup").modal("show");
     }
   }
 };

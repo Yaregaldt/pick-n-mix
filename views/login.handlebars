@@ -37,7 +37,7 @@
                 <input class="form-input" type="text" id="email-signup" />
             </div>
             <div class="form-group">
-                <label for="password-signup">Password(Minimum 8 characters):</label><br>
+                <label for="password-signup">Password (Minimum 8 characters):</label><br>
                 <input class="form-input" type="password" id="password-signup" />
             </div>
             <div class="form-group"><br>
@@ -46,5 +46,39 @@
         </form>
     </div>
 </div>
+
+<!-- failed to sign up modal --> 
+<section class="modal fade" id="failed-login" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog text-center" role="document">
+        <div class="modal-content bg-light">
+            <article class="modal-body">
+                <p>Login failed. Your username or password is incorrect.</p>
+            </article>
+            </form>
+            </article>
+            <div class="text-center mb-2">
+                <button type="button" class="btn btn-danger text-center" data-bs-dismiss="modal"
+                    style="width: 20%;">Okay</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- failed to login modal --> 
+<section class="modal fade" id="failed-signup" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog text-center" role="document">
+        <div class="modal-content bg-light">
+            <article class="modal-body">
+                <p>Signup failed. Please enter a valid email and make sure your password is at least 8 characters long.</p>
+            </article>
+            </form>
+            </article>
+            <div class="text-center mb-2">
+                <button type="button" class="btn btn-danger text-center" data-bs-dismiss="modal"
+                    style="width: 20%;">Okay</button>
+            </div>
+        </div>
+    </div>
+</section>
 
 <script src="./js/login.js"></script>
