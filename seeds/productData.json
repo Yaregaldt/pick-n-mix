@@ -228,7 +228,7 @@
         "desc": "Green leafy super food",
         "price": 7.00,
         "category_id": 1,
-        "image": "Kale.jpg"
+        "image": "kale.jpg"
     },
     {
         "name": "Mushrooms",
