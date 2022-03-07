@@ -11,21 +11,18 @@
                 <p>Total price&colon; &dollar;{{listItem.quantity}} * {{listItem.product.price}}.
                 <p>
             </div>
-            <p>{{this.id}}</p>
-            {{!-- <button class="btn btn-danger" data-id="{{this.id}}">-</button> --}}
             <input value="{{listItem.quantity}}" id="quantity-val{{this.id}}" data-id="{{this.id}}" type="number"
                 pattern="/^-?\d+\.?\d*$/" onkeypress="if(this.value.length ===3) return false;" style="width: 5rem;" />
-            {{!-- <button class="btn btn-success" value="{{this.product_id}}">+</button> --}}
             <button id="update" name="{{this.id}}" class="btn color-green m-3">Update</button><br>
-            <button class="btn btn-danger" id="bye" name="{{this.id}}">Delete</button>
+            <button class="btn btn-danger" id="delete-item" name="{{this.id}}">Delete</button>
         </li>
         {{/each}}
         <div class="text-center m-4">
-            <button id="hello" class="btn btn-danger" style="width: 10rem;">Clear All</button>
+            <button id="delete-list" class="btn btn-danger" style="width: 10rem;">Clear All</button>
         </div>
     </ol>
 </div>
 {{else}}
-Nothing here. Start adding some stuff?
+Your list is empty, <a href="/">click here to view some products!</a>
 {{/if}}
 <script src="/js/list.js"></script>
