@@ -65,4 +65,21 @@ const deleteList = async () => {
   }
 };
 
+// Function for calculating total price
+const productArr = [];
+
+const items = document.querySelectorAll("#price");
+for (const item of items) {
+  productArr.push(parseInt(item.innerHTML));
+}
+
+console.log(productArr);
+
+const totalPrice = () => {
+  const sum = productArr.reduce((partialSum, a) => partialSum + a, 0);
+  document.querySelector("#total-list-price").innerHTML = sum;
+};
+
+totalPrice();
+
 document.querySelector("#delete-list").addEventListener("click", deleteList); //add in mame

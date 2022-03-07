@@ -1,6 +1,6 @@
 {{#if logged_in}}
-<h2 class="text-center m-4">Welcome, to <span class="brand-font">Pick &amp; Mix</span>, {{user.first_name}}! Today is
-    {{format_date}}.</h2>
+<h2 class="text-center m-4">Welcome, to <span class="brand-font">Pick &amp; Mix</span>, {{user.first_name}}!</h2>
+<h5 class="text-center m-4" style="font-size: 1.1rem;">Today is {{format_date}}.</h5> <br>
 <h5 class="text-center m-2">Please look for any grocery items below or select by category on the right.</h5>
 {{else}}
 <h2 class="text-center m-4">Welcome to <span class="brand-font">Pick &amp; Mix</span>! Today is {{format_date}}.</h2>
@@ -28,6 +28,7 @@
         <div class="card-body">
             <h5 class="card-title">{{this.name}}</h5>
             <p class="card-text">{{this.desc}}</p>
+            <p class="card-text">${{this.price}} per unit</p>
             <button id="minus" class="btn btn-danger" data-id="{{this.id}}">-</button>
             <input value="1" id="quantity-val{{this.id}}" data-id="{{this.id}}" type="number" pattern="/^-?\d+\.?\d*$/"
                 onkeypress="if(this.value.length ===3) return false;" style="width: 5rem;" />

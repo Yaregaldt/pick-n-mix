@@ -16,7 +16,7 @@ const loginForm = async (event) => {
     if (response.ok) {
       document.location.replace("/"); //Send to homepage
     } else {
-      alert(response.statusText);
+      // alert(response.statusText);
     }
   }
 };
@@ -49,7 +49,7 @@ const signupForm = async (event) => {
     if (response.ok) {
       document.location.replace("/"); //Send back to homepage
     } else {
-      alert(response.statusText);
+      // alert(response.statusText);
     }
   }
 };
