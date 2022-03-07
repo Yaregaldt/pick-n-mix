@@ -1,8 +1,9 @@
 {{#if logged_in}}
-<h2 class="text-center m-4">Welcome, to <span class="brand-font">Pick &amp; Mix</span>, {{user.first_name}}!</h2>
+<h2 class="text-center m-4">Welcome, to <span class="brand-font">Pick &amp; Mix</span>, {{user.first_name}}! Today is
+    {{format_date}}.</h2>
 <h5 class="text-center m-2">Please look for any grocery items below or select by category on the right.</h5>
 {{else}}
-<h2 class="text-center m-4">Welcome to <span class="brand-font">Pick &amp; Mix</span>!</h2>
+<h2 class="text-center m-4">Welcome to <span class="brand-font">Pick &amp; Mix</span>! Today is {{format_date}}.</h2>
 <h5 class="text-center m-2">Please <a href="/login">sign in</a> to access the shopping list.</h5>
 {{/if}}
 

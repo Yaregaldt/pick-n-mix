@@ -1,7 +1,7 @@
-// dayjs = require("dayjs");
+const dayjs = require("dayjs");
 
-// let now = dayjs();
-// // const date = dayjs("2019-01-25").format("DD/MM/YYYY");
+const format_date = () => {
+  return dayjs().format("dddd, MMMM D");
+};
 
-// console.log(now);
-// modeule.export = dayjs;
+module.exports = { format_date };
