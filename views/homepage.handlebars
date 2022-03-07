@@ -28,11 +28,11 @@
         <div class="card-body">
             <h5 class="card-title">{{this.name}}</h5>
             <p class="card-text">{{this.desc}}</p>
-            <button class="btn btn-danger" data-id="{{this.id}}">-</button>
-            <input value="0" id="quantity-val{{this.id}}" data-id="{{this.id}}" type="number" pattern="/^-?\d+\.?\d*$/"
+            <button id="minus" class="btn btn-danger" data-id="{{this.id}}">-</button>
+            <input value="1" id="quantity-val{{this.id}}" data-id="{{this.id}}" type="number" pattern="/^-?\d+\.?\d*$/"
                 onkeypress="if(this.value.length ===3) return false;" style="width: 5rem;" />
-            <button class="btn btn-success" value="{{this.id}}">+</button>
-            <button name="{{this.id}}" class="btn color-green m-3">Add to List</button>
+            <button id="plus" class="btn btn-success" data-id="{{this.id}}">+</button>
+            <button id="add-list" data-id="{{this.id}}" class="btn color-green m-3">Add to List</button>
         </div>
     </div>
     {{/each}}

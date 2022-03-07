@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { ListItem } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   console.log("Post req successful!");
   try {
     const newListItem = await ListItem.create({
