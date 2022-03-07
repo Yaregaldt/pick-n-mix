@@ -6,7 +6,7 @@
 
 It's an app where you can look at groceries and their categories, and put items and the quantity into a list that the user can later look at. The list is tied to a user's account, so in order to use the app, a user must be logged in first. 
 
-> Github Repository Link: [https://github.com/MpAlfano/Grocery-Store](https://github.com/MpAlfano/Grocery-Store)
+> Github Repository Link: [https://github.com/MpAlfano/Grocery-Store](https://github.com/MpAlfano/pick-n-mix)
 >
 > Deployed App (Heroku) Link: [https://pick-n-mix.herokuapp.com/](https://pick-n-mix.herokuapp.com/)
 
