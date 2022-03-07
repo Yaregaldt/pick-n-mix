@@ -9,23 +9,26 @@
                 <img src="/images/{{listItem.product.image}}" style="width: 35px; height: 35px;">
                 <div class="fw-bold" style="font-size: 1.1rem;">{{listItem.product.name}} x {{listItem.quantity}}</div>
                 <p>Price each&colon; &dollar;{{listItem.product.price}}.</p>
-                <p class="fw-bold">Total price&colon; &dollar;<span id="price">{{total_price listItem.quantity listItem.product.price}}</span>.</p>
+                <p class="fw-bold">Total price&colon; &dollar;<span id="price">{{total_price listItem.quantity
+                        listItem.product.price}}</span>.</p>
             </div>
             <div>
                 <div class="text-center">
-                    <input value="{{listItem.quantity}}" id="quantity-val{{this.id}}" data-id="{{this.id}}" type="number"
-                    pattern="/^-?\d+\.?\d*$/" onkeypress="if(this.value.length ===3) return false;" style="width: 5rem;" />
+                    <input value="{{listItem.quantity}}" id="quantity-val{{this.id}}" data-id="{{this.id}}"
+                        type="number" pattern="/^-?\d+\.?\d*$/" onkeypress="if(this.value.length ===3) return false;"
+                        style="width: 5rem;" />
                 </div>
                 <div class="form-floating text-center">
                     <button id="update" name="{{this.id}}" class="btn color-green m-3">Update</button><br>
                     <button class="btn btn-danger" id="delete-item" name="{{this.id}}">Delete</button>
                 </div>
-            <div>
+                <div>
 
         </li>
         {{/each}}
         <div class="text-center m-4">
-            <p style="font-size: 1.15rem;" class="fw-bold">Total price of all items: $<span id="total-list-price"></span></p>
+            <p style="font-size: 1.15rem;" class="fw-bold">Total price of all items: $<span
+                    id="total-list-price"></span></p>
             <button id="delete-list" class="btn btn-danger" style="width: 10rem;">Clear All</button>
         </div>
     </ol>
@@ -33,9 +36,9 @@
 {{else}}
 <div class="d-flex flex-wrap justify-content-center item-choice text-center m-4">
     <ol class="list-group list-group-numbered border" style="width: 40rem;">
-    <p class="m-3">Your list is empty!</p>
+        <p class="m-3">Your list is empty!</p>
         <div class="text-center mb-4">
-        <a class="btn color-green text-center" style="width: 10rem;" href="/">Click here to view some products!</a>
+            <a class="btn color-green text-center" style="width: 10rem;" href="/">Click here to view some products!</a>
         </div>
     </ol>
 </div>
