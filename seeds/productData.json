@@ -70,14 +70,14 @@
         "image": "milk.jpg"
     },
     {
-        "name": "Icecream",
+        "name": "Ice Cream",
         "desc": "Sweetened frozen food comes in a variety of flavours",
         "price": 8.00,
         "category_id": 3,
         "image": "icecream.jpg"
     },
     {
-        "name": "Kitkat",
+        "name": "KitKat",
         "desc": "Chocolate covered wafer bar that comes in a variety of flavours",
         "price": 2.99,
         "category_id": 4,
@@ -140,7 +140,7 @@
         "image": "butter.jpg"
     },
     {
-        "name": "Gummy bears",
+        "name": "Gummy Bears",
         "desc": "Bear shaped gummy snack",
         "price": 2.99,
         "category_id": 4,
@@ -228,7 +228,7 @@
         "desc": "Green leafy super food",
         "price": 7.00,
         "category_id": 1,
-        "image": "Kale.jpg"
+        "image": "kale.jpg"
     },
     {
         "name": "Mushrooms",
@@ -246,7 +246,7 @@
     },
     {
         "name": "Pear",
-        "desc": "woody fruit that can be consumed fresh, juiced or canned",
+        "desc": "Woody fruit that can be consumed fresh, juiced or canned",
         "price": 4.00,
         "category_id": 1,
         "image": "pear.jpg"
@@ -301,7 +301,7 @@
         "image": "watermelon.jpg"
     },
     {
-        "name": "Kiwi Fruit",
+        "name": "Kiwi",
         "desc": "An edible berry that is fuzzy outside, sweet and soft texture inside.",
         "price": 4.00,
         "category_id": 1,
@@ -322,7 +322,7 @@
         "image": "jawbreakers.jpg"
     },
     {
-        "name": "LaffyTaffy",
+        "name": "Laffy Taffy",
         "desc": "Taffy that come in variety of flavours",
         "price": 2.99,
         "category_id": 4,
@@ -336,7 +336,7 @@
         "image": "nerds.jpg"
     },
     {
-        "name": "Poprocks",
+        "name": "Pop Rocks",
         "desc": "Candy that goes great with fizzy drinks",
         "price": 1.99,
         "category_id": 4,

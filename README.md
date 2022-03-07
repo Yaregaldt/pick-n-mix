@@ -15,8 +15,9 @@ It's an app where you can look at groceries and their categories, and put items 
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Example](#example)
-4. [License](#license)
-5. [Contributions/Questions](#contributionsquestions)
+4. [Technologies Used](#technologies-used)
+5. [License](#license)
+6. [Contributions/Questions](#contributionsquestions)
 
 ## Installation
 
@@ -30,8 +31,31 @@ Alternatively, check out the deployed Heroku link if you wish to utilize the sit
 
 ## Example
 
-### Screenshot
-![Pick n Mix homepage](./images/app1.png)
+### Homepage
+![Pick n Mix homepage](./public/images/app1.png)
+
+### Login/Sign Up Page
+![Pick n Mix login screen](./public/images/app2.png)
+
+### Shopping List Page
+![Pick n Mix shopping list screen](./public/images/app3.png)
+
+
+## Technologies Used 
+
+* bcrypt
+* bootstrap
+* connect-session-sequelize
+* dayjs - (New technology, for date and time formatting)
+* dotenv
+* express
+* express-handlebars
+* express-session
+* mysql2
+* nodemon
+* node
+* npm
+* sequelize
 
 ## License
 
@@ -43,7 +67,7 @@ These were the contributers for the application:
 
 * Mark Alfano: (Github: [MpAlfano](https://github.com/MpAlfano), Email: Mpalfano4@gmail.com)
 * Bilal Raza: (Github: [Bickolus](https://github.com/Bickolus), Email: smbraza97@gmail.com)
-* Sanchai Zahid: (Github: [ShanchaiZ](https://github.com/ShanchaiZ), Email: shanchai.zahid@gmail.com)
+* Shanchai Zahid: (Github: [ShanchaiZ](https://github.com/ShanchaiZ), Email: shanchai.zahid@gmail.com)
 * Yaregal (Github: [Yaregal](https://github.com/Yaregaldt), Email: dyaregal@gmail.com)
 
 If you have any additional questions about this application, please feel free to contact any of the members above.
