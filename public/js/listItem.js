@@ -60,13 +60,12 @@ const addProduct = async (event) => {
     });
 
     if (response.ok) {
-      alert("Item added");
+      // alert("Item added");
       document.querySelector(`${valueSelector}`).value = "1";
     } else {
-      console.log("wtf");
       document.location.replace("/login");
     }
   } else {
-    alert("Must be a quantity greater than zero");
+  //   alert("Must be a quantity greater than zero");
   }
 };
