@@ -62,10 +62,11 @@ const addProduct = async (event) => {
     if (response.ok) {
       // alert("Item added");
       document.querySelector(`${valueSelector}`).value = "1";
+      $("#added").modal("show");
     } else {
       document.location.replace("/login");
     }
   } else {
-  //   alert("Must be a quantity greater than zero");
+    //   alert("Must be a quantity greater than zero");
   }
 };
