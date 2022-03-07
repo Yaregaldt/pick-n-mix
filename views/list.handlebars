@@ -29,7 +29,7 @@
         <div class="text-center m-4">
             <p style="font-size: 1.15rem;" class="fw-bold">Total price of all items: $<span
                     id="total-list-price"></span></p>
-            <button id="delete-list" class="btn btn-danger" style="width: 10rem;">Clear All</button>
+            <button id="delete-list-modal-show" class="btn btn-danger" style="width: 10rem;">Clear All</button>
         </div>
     </ol>
 </div>
@@ -43,4 +43,42 @@
     </ol>
 </div>
 {{/if}}
+
+<!-- Modal for failing to edit list item -->
+<section class="modal fade" id="failed-edit" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog text-center" role="document">
+        <div class="modal-content bg-light">
+            <article class="modal-body">
+                <p>Please enter a quantity above 0.</p>
+            </article>
+            </form>
+            </article>
+            <div class="text-center mb-2">
+                <button type="button" class="btn btn-danger text-center" data-bs-dismiss="modal"
+                    style="width: 20%;">Okay</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal warning for clearing list -->
+<div class="modal" id="clear-list-modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Warning!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>You are about to clear your whole shopping list! Are you sure?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No, close window!</button>
+        <button type="button" id="delete-list" class="btn btn-danger">Yes, delete all.</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script src="/js/List.js"></script>

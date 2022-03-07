@@ -22,6 +22,37 @@
 <!-- Product cards -->
 <div class="d-flex flex-wrap justify-content-center item-choice">
 
+    <!-- Modals for adding and failing to add to list -->
+    <section class="modal fade" id="added" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog text-center" role="document">
+            <div class="modal-content bg-light">
+                <article class="modal-body">
+                    <p>Item added to your list!</p>
+                </article>
+                </form>
+                </article>
+                <div class="text-center mb-2">
+                    <button type="button" class="btn color-green text-center" data-bs-dismiss="modal" style="width: 20%;">Okay</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal fade" id="failed-added" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog text-center" role="document">
+            <div class="modal-content bg-light">
+                <article class="modal-body">
+                    <p>Please enter a quantity above 0.</p>
+                </article>
+                </form>
+                </article>
+                <div class="text-center mb-2">
+                    <button type="button" class="btn btn-danger text-center" data-bs-dismiss="modal" style="width: 20%;">Okay</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{#each products as |product|}}
     <div class="card mb-4 mx-3 shadow text-center" style="width: 20rem;">
         <img src="/images/{{product.image}}" class="card-img-top" alt="{{this.name}}">

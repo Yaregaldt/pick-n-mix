@@ -17,7 +17,7 @@ for (const button of delButtons) {
         window.location.reload();
       }
     } else {
-      alert("Failed to add product to list");
+      alert("Failed to delete product from list");
     }
   });
 }
@@ -48,22 +48,26 @@ const updateProduct = async (event) => {
       window.location.reload();
     }
   } else {
-    alert("enter a number above 0 or use delete to remove.");
+      $("#failed-edit").modal("show");
     return;
   }
 };
 
 //Button to clear list at bottom of page
 const deleteList = async () => {
-  if (confirm("Cick okay to clear your list.") == true) {
-    const response = await fetch("/api/list/", {
-      method: "DELETE",
-    });
-    if (response.ok) {
-      document.location.replace("/list");
-    }
+  // if (confirm("Cick okay to clear your list.") == true) {
+  const response = await fetch("/api/list/", {
+    method: "DELETE",
+  });
+  if (response.ok) {
+    document.location.replace("/list");
   }
+  // }
 };
+
+let showClearModal = () => {
+  $("#clear-list-modal").modal("show");
+}
 
 // Function for calculating total price
 const productArr = [];
@@ -82,4 +86,5 @@ const totalPrice = () => {
 
 totalPrice();
 
+document.querySelector("#delete-list-modal-show").addEventListener("click", showClearModal);
 document.querySelector("#delete-list").addEventListener("click", deleteList);

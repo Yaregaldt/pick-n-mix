@@ -197,7 +197,7 @@
     },
     {
         "name": "Garlic",
-        "desc": "bulbous flowering plant used ward off vampires. Key ingredient in garlicbread",
+        "desc": "Bulbous flowering plant used to ward off vampires. Key ingredient in garlic bread",
         "price": 5.00,
         "category_id": 1,
         "image": "garlic.jpg"
