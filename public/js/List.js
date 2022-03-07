@@ -82,4 +82,4 @@ const totalPrice = () => {
 
 totalPrice();
 
-document.querySelector("#delete-list").addEventListener("click", deleteList); //add in mame
+document.querySelector("#delete-list").addEventListener("click", deleteList);
