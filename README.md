@@ -68,6 +68,6 @@ These were the contributers for the application:
 * Mark Alfano: (Github: [MpAlfano](https://github.com/MpAlfano), Email: Mpalfano4@gmail.com)
 * Bilal Raza: (Github: [Bickolus](https://github.com/Bickolus), Email: smbraza97@gmail.com)
 * Shanchai Zahid: (Github: [ShanchaiZ](https://github.com/ShanchaiZ), Email: shanchai.zahid@gmail.com)
-* Yaregal (Github: [Yaregal](https://github.com/Yaregaldt), Email: dyaregal@gmail.com)
+* Yaregal (Github: [Yaregal](https://github.com/Yaregaldt), Email: yaregald3@gmail.com)
 
 If you have any additional questions about this application, please feel free to contact any of the members above.
